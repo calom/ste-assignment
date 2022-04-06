@@ -9,7 +9,7 @@
     "cy:run": "npm run build && concurrently -rk -s first \"npm run serve\" \"cypress run -c baseUrl=http://localhost:5000\""
   },
   "dependencies": {
-    "@harlem/core": "^2.2.3",
+    "@harlem/core": "^2.3.1",
     "insane": "^2.6.2",
     "marked": "^4.0.12",
     "vue": "^3.2.30",

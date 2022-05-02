@@ -12,7 +12,7 @@ import { ROUTES } from '../constants'
 
 
 Cypress.Commands.add('login', (username = 'calo') => {
-  cy.fixture('user.calo.json').then(authResponse => {
+  cy.fixture('user.json').then(authResponse => {
     authResponse.user.username = username
     cy.intercept('POST', /users\/login$/, { statusCode: 200, body: authResponse })
   })

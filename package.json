@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
+    "cy:open": "cypress open",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "concurrently \"npm run build\" \"npm run lint:tsc\" \"npm run lint:script\"",
@@ -28,6 +29,7 @@
     "babel-jest": "^27.4.2",
     "concurrently": "^7.0.0",
     "cypress": "^9.1.1",
+    "cypress-dark": "^1.8.3",
     "eslint": "^8.4.0",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-cypress": "^2.12.1",

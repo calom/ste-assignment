@@ -1,8 +1,8 @@
-import { ROUTES } from '../constants'
+import { ROUTES } from '../../constants'
 
 describe('Auth', () => {
   describe('Login and logout', () => {
-    it('should login success when submit a valid login form', () => {
+    it('login and log out successfully', () => {
       cy.login()
 
       cy.url().should('match', /\/#\/$/)
@@ -72,7 +72,7 @@ describe('Auth', () => {
     })
 
     it('should display error message when submit the form that username already exist', () => {
-      cy.intercept('POST', /users$/, {
+      cy.intercept('POST', /users/, {
         statusCode: 422,
         body: { errors: { email: ['has already been taken'], username: ['has already been taken'] } },
       }).as('registerRequest')
